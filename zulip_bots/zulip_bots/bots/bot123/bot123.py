@@ -9,9 +9,13 @@ import requests
 
 from typing import Dict, Any, Tuple, Union
 
+# Reminder bot format : neo discussion on <subject> at <time> <Date> 
+
+
 class botHandler(object):
     def usage(self) -> str:
         return "This is just a sample bot"
+        # Discussion\s+on\s+(\w+)\s+at\s+(\w+)\s+(\w+)
     def handle_message(self, message: Dict[str, str], bot_handler: Any) -> None:
             print(message)
             if message['content']=="help":
